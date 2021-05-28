@@ -15,7 +15,7 @@ ACharacterMovement::ACharacterMovement()
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
 
-	CameraBoom->TargetArmLength = 600.0f;
+	CameraBoom->TargetArmLength = 1000.0f;
 	CameraBoom->AddRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
 
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
