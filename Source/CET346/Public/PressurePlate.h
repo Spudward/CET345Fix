@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "Engine/TriggerBox.h"
-#include "DeathBox.generated.h"
+#include "PressurePlate.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
-class CET346_API ADeathBox : public ATriggerBox
+class CET346_API APressurePlate : public ATriggerBox
 {
 	GENERATED_BODY()
 
@@ -19,7 +19,10 @@ protected:
 	virtual void BeginPlay() override;
 public:
 	// constructor sets default values for this actor's properties
-	ADeathBox();
+	APressurePlate();
+
+	UPROPERTY(EditAnywhere)
+		AActor* myBlockade;
 
 	// overlap begin function
 	UFUNCTION()
